@@ -4,17 +4,17 @@ Use this as a pragmatic shelf system. It is a decision aid, not a substitute for
 
 ## Platform Baseline
 
-- 起点中文网当前公开分类包括 `玄幻`、`奇幻`、`武侠`、`仙侠`、`都市`、`现实`、`军事`、`历史`、`游戏`、`体育`、`科幻`、`诸天无限`、`悬疑`、`轻小说`.
+- 起点中文网 `/all` 公开分类包括 `玄幻`、`奇幻`、`武侠`、`仙侠`、`都市`、`现实`、`军事`、`历史`、`游戏`、`体育`、`科幻`、`诸天无限`、`悬疑`、`轻小说`，女生侧还展示古代言情、仙侠奇缘、现代言情、浪漫青春、玄幻言情、悬疑推理、短篇、科幻空间、游戏竞技、轻小说、现实生活等入口。
 - 纵横中文网移动端首页保留 `玄幻奇幻`、`武侠仙侠`、`都市`、`历史` 等推荐大类，并在具体作品行展示作者、连载状态、分类和字数。
-- 晋江移动端频道展示 `衍生纯爱`、`二次元言情`、`衍生言情`、`衍生无CP`、`原创轻小说` 等频道；分类页也出现 `古言`、`现言`、`纯爱`、`衍生`、`无CP`、`百合` 等入口。
+- 晋江移动端分类频道展示 `古言`、`现言`、`纯爱`、`衍生`、`无CP+`、`百合`，频道页也出现 `衍生纯爱`、`二次元言情`、`衍生言情`、`衍生无CP`、`原创轻小说` 等入口。
 
 Reference URLs for future lookups:
 
-- `https://www.qidian.com/`
+- `https://www.qidian.com/all/`
 - `https://www.qidian.com/rank/hotsales/`
 - `https://m.zongheng.com/`
-- `https://m.jjwxc.net/channel/channel/trdm`
-- `https://m.jjwxc.net/assort/团宠`
+- `https://m.jjwxc.net/pindao`
+- `https://m.jjwxc.com/channel/channel/trmd`
 
 ## Evidence Policy
 
@@ -30,7 +30,51 @@ Use evidence in this order:
 
 Do not classify from author names. Category-like tokens inside author names are ignored. `女帝666` as an author is not evidence for 历史、玄幻、言情, or any other shelf.
 
-`龙族` is an optional special shelf, not a generic dragon keyword. Keep it only when the user wants a dedicated Dragon Raja shelf or the library already uses one.
+## Deep Archive Fields
+
+Use these fields for database-style archival. Prefer source-confirmed values; use `待确认` when the evidence is weak.
+
+### Core category
+
+Use exactly one folder/category from the allowed shelf set below. Platform names can be mapped, for example `诸天无限` to `无限流`, `悬疑` to `悬疑推理`, `玄幻奇幻` to the better-supported one of `玄幻` or `奇幻`, and 晋江 `古言`/`现言`/`百合` usually to `言情` unless the user wants finer shelves.
+
+### Subtags
+
+Record 3-6 concise tags when evidence allows. Good tags describe trope, setting, structure, relationship mode, or reader promise.
+
+Common male-frequency tags: `系统流`、`升级流`、`废柴逆袭`、`无敌流`、`诸天流`、`无限流`、`种田流`、`幕后流`、`第四天灾`、`群像`、`权谋`、`争霸`、`经营建设`、`赛博朋克`、`末世废土`、`克苏鲁`、`黑科技`、`电竞`、`官场`、`文娱`、`神豪`、`美食`、`医生`.
+
+Common female-frequency tags: `古言`、`现言`、`穿书`、`重生`、`破镜重圆`、`先婚后爱`、`青梅竹马`、`追妻火葬场`、`马甲文`、`团宠`、`甜宠`、`虐恋`、`宫斗宅斗`、`权谋`、`女强`、`种田`、`娱乐圈`、`校园`、`纯爱`、`百合`、`无CP`.
+
+Common cross-channel tags: `同人`、`综漫`、`综英美`、`二次元`、`轻小说`、`日常`、`悬疑探案`、`灵异怪谈`、`民俗恐怖`、`本格推理`、`刑侦`、`成长流`、`群像`、`治愈`.
+
+### Audience
+
+Use `男频`, `女频`, or `无性别偏向`.
+
+- `男频`: source/platform positions it as male-channel, or the synopsis centers power progression,升级、争霸、官场、军事、体育、硬科幻、网游电竞, or business/technology success fantasies.
+- `女频`: source/platform positions it as female-channel, or the synopsis centers romance, 古言/现言/纯爱/百合, relationship angst, identity reveal, family/court relationship networks, or female lead growth.
+- `无性别偏向`: classics, nonfiction, literary fiction, broad suspense, many translated works, or when source evidence does not support channel inference.
+
+### Narrative perspective
+
+Use `第一人称`, `第三人称`, or `待确认`. Confirm from sample chapters or reliable descriptions. A title such as `我在...` is only a title convention, not perspective evidence.
+
+### Appeal / pain point
+
+Write one short editor-style sentence naming the core hook: e.g. `低起点逆袭升级`, `副本闯关和团队博弈`, `破镜重圆的情感拉扯`, `刑侦线索拼图`, `经营建设带来的正反馈`. Avoid generic praise such as `很好看`.
+
+### Completion status
+
+Use `连载中`, `已完结`, `大纲阶段`, or `待确认`. Prefer platform status. Filename tags like `完结`、`全本` are useful but still weaker than source pages.
+
+### Suggested folder name
+
+Use `[频道]-[类型]-[主标签]-作品名`; sanitize Windows-invalid characters. Examples:
+
+- `[男频]-[玄幻]-[升级流]-凡人修仙传`
+- `[女频]-[言情]-[破镜重圆]-某某书名`
+- `[综合]-[悬疑推理]-[刑侦]-某某案件`
 
 ## Folder Sets
 
@@ -53,7 +97,6 @@ Use this when the user wants the existing folder style preserved:
 - `同人`
 - `军事`
 - `文学`
-- `龙族`
 - `成人`
 - `待分类`
 
@@ -82,7 +125,6 @@ Use or recommend this when the collection is large and the user wants finer shel
 - `文学`
 - `传记纪实`
 - `社科`
-- `龙族`
 - `成人`
 - `待分类`
 
@@ -94,7 +136,7 @@ These words are common across genres. Use them as search hints, not category pro
 - `大唐`、`大明`、`三国`、`秦`、`宋`、`清`：may be 历史, but also title flavor, fan fiction, game worlds, or author tags.
 - `重生`、`系统`、`神豪`：often 都市, but may be 历史、玄幻、言情、科幻 or 游戏.
 - `诡`、`怪谈`、`异闻`：may be 灵异恐怖, 悬疑推理, or 玄幻奇幻.
-- `龙族`：use the special `龙族` shelf only for 江南《龙族》正传/外传 and clearly Dragon Raja-centered works; otherwise evaluate as 同人、玄幻, or 奇幻. Treat it as an optional collection shelf, not a generic genre.
+- `龙族`、`路明非`、`卡塞尔`：treat as title/IP clues, not a shelf. Source-confirm whether the work is 江南《龙族》正传/外传 (`奇幻` or `轻小说` depending on source tags), Dragon Raja fan fiction (`同人`), or unrelated original fantasy (`玄幻`/`奇幻`).
 
 ## Category Guidance
 
@@ -223,10 +265,6 @@ Search hints: 传记、回忆录、纪实、报告文学、口述史、人物传
 Use for social science, humanities, economics, psychology, management, philosophy, and general nonfiction.
 
 Search hints: 社科、经济、管理、心理、哲学、历史研究、社会学、人类学.
-
-### 龙族
-
-Use as an optional special collection shelf when the user wants a dedicated `龙族` folder or the library already has one. Put 江南《龙族》正传、前传、外传, and clearly Dragon Raja-centered fan fiction here. Otherwise classify by content into `同人` or the primary genre shelf.
 
 ### 成人
 

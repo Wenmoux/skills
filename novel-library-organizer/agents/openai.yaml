@@ -1,3 +1,3 @@
 display_name: Novel Library Organizer
-short_description: Source-check Chinese EPUB/TXT novels, handle optional `龙族` shelves, and generate audit reports.
-default_prompt: Classify the EPUB/TXT novels in this folder by first producing a dry-run candidate manifest, then verify every uncertain title online, record source-backed overrides, keep optional `龙族` handling explicit, move only confirmed books into genre folders, and generate a Markdown report plus CSV manifest.
+short_description: Source-check Chinese EPUB/TXT novels, add deep archive fields, and generate audit reports plus a pixel web library.
+default_prompt: Classify the EPUB/TXT novels in this folder by first producing a dry-run candidate manifest and pixel-style web library, then verify every uncertain title online, record source-backed overrides with category, subtags, audience, perspective, appeal, and completion status, move only confirmed books into genre folders, and generate Markdown, CSV, and HTML outputs.
